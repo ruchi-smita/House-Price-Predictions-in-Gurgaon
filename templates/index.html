@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>House Price Predictor</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<h1>🏠 House Price Predictor</h1>
+<p>Enter housing details to predict property value</p>
+
+<form action="/predict" method="post">
+
+<div class="grid">
+
+<input type="text" name="longitude" placeholder="Longitude" required>
+
+<input type="text" name="latitude" placeholder="Latitude" required>
+
+<input type="text" name="housing_median_age" placeholder="House Age" required>
+
+<input type="text" name="total_rooms" placeholder="Total Rooms" required>
+
+<input type="text" name="total_bedrooms" placeholder="Bedrooms" required>
+
+<input type="text" name="population" placeholder="Population" required>
+
+<input type="text" name="households" placeholder="Households" required>
+
+<input type="text" name="median_income" placeholder="Median Income" required>
+
+<select name="ocean_proximity">
+
+<option value="<1H OCEAN"> <1H OCEAN </option>
+<option value="INLAND"> INLAND </option>
+<option value="NEAR BAY"> NEAR BAY </option>
+<option value="NEAR OCEAN"> NEAR OCEAN </option>
+<option value="ISLAND"> ISLAND </option>
+
+</select>
+
+</div>
+
+<button type="submit">Predict Price</button>
+
+</form>
+
+<div class="result">
+
+{{ prediction_text }}
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

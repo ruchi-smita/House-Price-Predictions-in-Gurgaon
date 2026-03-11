@@ -1,0 +1,83 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:url("house.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:15px;
+    width:500px;
+    color:white;
+    text-align:center;
+
+    animation:fade 1s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    margin-bottom:5px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:20px;
+}
+
+input,select{
+    padding:10px;
+    border:none;
+    border-radius:6px;
+}
+
+button{
+
+    margin-top:20px;
+    padding:12px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+
+    background:#ff6b6b;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff3b3b;
+    transform:scale(1.03);
+}
+
+.result{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
